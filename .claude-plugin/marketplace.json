@@ -1,0 +1,5 @@
+{
+  "name": "usage-bar",
+  "owner": { "name": "ahmed-waheed91" },
+  "plugins": [{ "name": "usage-bar", "source": "./" }]
+}

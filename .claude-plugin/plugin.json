@@ -1,0 +1,57 @@
+{
+  "name": "usage-bar",
+  "version": "0.1.0",
+  "description": "A bar above the prompt showing 5-hour and weekly usage, and whether the prompt cache is warm with a countdown to cold.",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "ttlOverride": {
+      "type": "string",
+      "title": "Cache TTL",
+      "description": "auto learns it; or a fixed duration such as 5m or 1h",
+      "default": "auto"
+    },
+    "warnPercent": {
+      "type": "number",
+      "title": "Amber from (%)",
+      "description": "Usage bars turn amber at this percent",
+      "default": 70
+    },
+    "dangerPercent": {
+      "type": "number",
+      "title": "Red from (%)",
+      "description": "Usage bars turn red at this percent",
+      "default": 90
+    },
+    "toastPercents": {
+      "type": "string",
+      "title": "Usage toasts at (%)",
+      "description": "Comma-separated percents that raise a toast; empty for none",
+      "default": "80,95"
+    },
+    "cacheToast": {
+      "type": "boolean",
+      "title": "Cache toast",
+      "description": "Toast when the cache has under a minute left",
+      "default": true
+    },
+    "staleMinutes": {
+      "type": "number",
+      "title": "Stale after (min)",
+      "description": "Dim usage numbers older than this",
+      "default": 15
+    },
+    "showLimits": {
+      "type": "boolean",
+      "title": "Show usage limits",
+      "description": "Show the 5-hour, weekly and any other limit segments",
+      "default": true
+    },
+    "showCache": {
+      "type": "boolean",
+      "title": "Show cache",
+      "description": "Show the prompt cache segment",
+      "default": true
+    }
+  }
+}
